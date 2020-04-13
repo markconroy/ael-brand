@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `addEventLister`,
-    subtitle: `Free Developer Events`,
-    description: `addEventLister is the place to see listing of free developer events worldwide`,
+    subtitle: `Events Listing`,
+    description: `addEventLister - find the events you want`,
     author: `@markconroy`,
     repo: `https://github.com/markconroy/here`,
   },
@@ -13,13 +13,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `events`,
-        path: `${__dirname}/src/events`,
       },
     },
     `gatsby-transformer-remark`,

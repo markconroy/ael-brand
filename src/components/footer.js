@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 const StyledFooter = styled.footer`
@@ -22,45 +22,11 @@ const StyledFooter = styled.footer`
   }
 `
 const Footer = () => (
-
-  <StaticQuery
-    query={graphql`
-      query FooterQuery {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                city
-                country
-              }
-            }
-          }
-          cityGroup: group(field: frontmatter___city) {
-            totalCount
-          }
-          countriesGroup: group(field: frontmatter___country) {
-            totalCount
-          }
-          onlineGroup: group(field: frontmatter___online) {
-            totalCount
-          }
-          physicalGroup: group(field: frontmatter___country) {
-            totalCount
-          }
-        }
-      }
-    `}
-    render={data => (
       <StyledFooter>
         <div className="footer__inner">
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/events">{data.allMarkdownRemark.edges.length} Events</Link></li>
-              <li><Link to="/events/cities">{data.allMarkdownRemark.cityGroup.length} Cities</Link></li>
-              <li><Link to="/events/countries">{data.allMarkdownRemark.countriesGroup.length} Countries</Link></li>
-              <li><Link to="/events/online">Online Events</Link></li>
-              <li><Link to="/events/physical">Physical Events</Link></li>
             </ul>
           </nav>
           <p>
@@ -68,8 +34,7 @@ const Footer = () => (
           </p>
         </div>
       </StyledFooter>
-    )}
-  />
+
 )
 
 export default Footer

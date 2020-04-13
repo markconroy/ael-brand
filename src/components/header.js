@@ -78,9 +78,6 @@ const Header = () => (
                 {data.site.siteMetadata.subtitle}
               </Link>
             </div>
-            <div>
-              <a className="header__link header__link--with-border" href={data.site.siteMetadata.repo}>Add New Event</a>
-            </div>
           </div>
           <div className="header__support">
               <p>
