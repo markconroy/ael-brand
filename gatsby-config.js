@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `addEventLister`,
-    subtitle: `Events Listing`,
+    subtitle: ``,
     description: `addEventLister - find the events you want`,
     author: `@markconroy`,
     repo: `https://github.com/markconroy/here`,
